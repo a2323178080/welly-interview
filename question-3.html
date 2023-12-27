@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question-3</title>
+</head>
+<body>
+<script>
+    // 3. JavaScript: 重構
+    // 問題：重構這段程式碼並說明原因
+    // function formatName(firstName, lastName) {
+    // let formattedName = '';
+    // if (firstName) {
+    // formattedName += firstName;
+    // }
+    // if (lastName) {
+    // formattedName += ' ' + lastName;
+    // }
+    // return formattedName;
+    // }
+
+    // 答題:
+    function formatName(firstName, lastName) {
+        let formattedName = [firstName, lastName].filter(Boolean).join(' ');
+        return formattedName;
+    }
+    // 以下說明原因
+    // 使用 .filter(Boolean) 會過濾掉所有的 undefined、null 和空字符串，這樣就不需要手動檢查每一個變數是否存在或有值。
+    // 使用 .join(' ') 會將陣列中的所有元素組合成一個字串，並在每個元素之間加上一個空格。
+</script>
+
+</body>
+</html>

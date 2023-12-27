@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>question-4</title>
+</head>
+<body>
+<!--4. React: 條件渲染-->
+<!--問題：在React中，如何根據條件渲染兩種不同的內容？-->
+<!--範例：-->
+<!--function ConditionalRendering({ isLoggedIn }) {-->
+<!--// 實作你的條件渲染-->
+<!--}-->
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    function ConditionalRendering({ isLoggedIn }) {
+        return isLoggedIn ? <div>歡迎使用者!</div> : <div>請登入!</div>;
+    }
+    ReactDOM
+        .createRoot(document.getElementById("root"))
+        .render(<ConditionalRendering/>)
+</script>
+</body>
+</html>
